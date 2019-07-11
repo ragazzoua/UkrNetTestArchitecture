@@ -5,7 +5,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,6 +24,10 @@ public class FirstTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        openUkrNet();
+    }
+
+    private void openUkrNet() {
         driver.get("https://www.ukr.net/");
     }
 
