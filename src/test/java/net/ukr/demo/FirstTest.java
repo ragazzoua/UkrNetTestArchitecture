@@ -34,7 +34,7 @@ public class FirstTest {
     @Test
     public void testUkrNetOpening() {
 
-        driver.findElement(By.id("search-input"));
+        goToSearch();
         driver.findElement(By.id("search-input")).clear();
         driver.findElement(By.id("search-input")).click();
         driver.findElement(By.id("search-input")).sendKeys("Test");
@@ -44,6 +44,10 @@ public class FirstTest {
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[2]").click();
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[3]").click();
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[4]").click();
+    }
+
+    private void goToSearch() {
+        driver.findElement(By.id("search-input"));
     }
 
     @AfterMethod
