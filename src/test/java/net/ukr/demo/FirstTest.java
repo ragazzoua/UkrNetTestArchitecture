@@ -35,15 +35,27 @@ public class FirstTest {
     public void testUkrNetOpening() {
 
         goToSearch();
-        driver.findElement(By.id("search-input")).clear();
-        driver.findElement(By.id("search-input")).click();
-        driver.findElement(By.id("search-input")).sendKeys("Test");
-        driver.findElement(By.id("search-input")).clear();
-        driver.findElement(By.id("search-input")).sendKeys("Second Test");
+        clearSearchField();
+        clickInSearchInput();
+        typeToSearchField("Test");
+
+        typeToSearchField("Second Test");
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[1]").click();
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[2]").click();
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[3]").click();
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[4]").click();
+    }
+
+    private void typeToSearchField(String test) {
+        driver.findElement(By.id("search-input")).sendKeys(test);
+    }
+
+    private void clickInSearchInput() {
+        driver.findElement(By.id("search-input")).click();
+    }
+
+    private void clearSearchField() {
+        driver.findElement(By.id("search-input")).clear();
     }
 
     private void goToSearch() {
