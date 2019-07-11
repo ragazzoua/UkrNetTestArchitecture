@@ -37,15 +37,15 @@ public class FirstTest {
         goToSearch();
         clearSearchField();
         clickInSearchInput();
-        typeToSearchField("Test");
-        typeToSearchField("Second Test");
+        typeToSearchField(new SearchInput("Test"));
+        typeToSearchField(new SearchInput("Second Test"));
         clickWeather();
         clickExchange();
         clickDiesel();
-        ClickGoroskop();
+        clickGoroskop();
     }
 
-    private void ClickGoroskop() {
+    private void clickGoroskop() {
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[4]").click();
     }
 
@@ -61,8 +61,8 @@ public class FirstTest {
         driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[1]").click();
     }
 
-    private void typeToSearchField(String test) {
-        driver.findElement(By.id("search-input")).sendKeys(test);
+    private void typeToSearchField(SearchInput searchInput) {
+        driver.findElement(By.id("search-input")).sendKeys(searchInput.getTest());
     }
 
     private void clickInSearchInput() {
