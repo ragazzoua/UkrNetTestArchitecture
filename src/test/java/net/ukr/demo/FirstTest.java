@@ -37,7 +37,10 @@ public class FirstTest {
         driver.findElement(By.id("search-input")).sendKeys("Test");
         driver.findElement(By.id("search-input")).clear();
         driver.findElement(By.id("search-input")).sendKeys("Second Test");
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.ukr.net/");
+        driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[1]").click();
+        driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[2]").click();
+        driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[3]").click();
+        driver.findElementByXPath("/html/body/div[1]/main/div[3]/div[1]/section/ul/li[4]").click();
     }
 
     @AfterMethod
