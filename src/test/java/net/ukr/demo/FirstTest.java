@@ -25,12 +25,12 @@ public class FirstTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-
+        driver.get("https://www.ukr.net/");
     }
 
     @Test
     public void testUkrNetOpening() {
-        driver.get("https://www.ukr.net/");
+
         driver.findElement(By.id("search-input"));
         driver.findElement(By.id("search-input")).clear();
         driver.findElement(By.id("search-input")).click();
