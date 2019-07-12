@@ -1,13 +1,13 @@
 package net.ukr.demo;
 
 public class SearchInput {
-    private final String test;
+    private final String text;
 
-    public SearchInput(String test) {
-        this.test = test;
+    public SearchInput(String text) {
+        this.text = text;
     }
 
-    public String getTest() {
-        return test;
+    public String getText() {
+        return text;
     }
 }

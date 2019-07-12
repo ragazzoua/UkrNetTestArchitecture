@@ -62,7 +62,7 @@ public class FirstTest {
     }
 
     private void typeToSearchField(SearchInput searchInput) {
-        driver.findElement(By.id("search-input")).sendKeys(searchInput.getTest());
+        driver.findElement(By.id("search-input")).sendKeys(searchInput.getText());
     }
 
     private void clickInSearchInput() {
