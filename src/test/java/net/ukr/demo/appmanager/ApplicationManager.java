@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * created by FAMILY 13.07.2019
  */
 
-public class ApplicationManager {
+public class ApplicationManager extends GroupHelper {
     ChromeDriver driver;
 
     public static boolean isAlertPresent(ChromeDriver driver) {
