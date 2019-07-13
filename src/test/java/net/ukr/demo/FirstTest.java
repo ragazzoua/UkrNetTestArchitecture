@@ -45,7 +45,7 @@ public class FirstTest {
         goToContacts();
         clickAddNewGroup();
         selectGroupNameField();
-        fillGroupForm();
+        fillGroupForm("new group");
         submitGroupCreation();
 
 
@@ -55,8 +55,8 @@ public class FirstTest {
         driver.findElementByXPath("//input[@ct='CreateGroup']").click();
     }
 
-    private void fillGroupForm() {
-        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys("new group");
+    private void fillGroupForm(String groupName) {
+        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys(groupName);
     }
 
     private void selectGroupNameField() {
