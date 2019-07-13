@@ -28,4 +28,8 @@ public class GroupHelper extends HelperBase {
     public void clickAddNewGroup() {
         click("//*[@id='add_group']/i");
     }
+
+    public void clickAddContact(){
+        click("/html/body/div[1]/div[5]/ul/li[6]/a");
+    }
 }
