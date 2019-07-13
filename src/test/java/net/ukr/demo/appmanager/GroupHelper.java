@@ -10,6 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class GroupHelper {
     ChromeDriver driver;
 
+    public GroupHelper(ChromeDriver driver) {
+        this.driver = driver;
+    }
+
     public void submitGroupCreation() {
         driver.findElementByXPath("//input[@ct='CreateGroup']").click();
     }
