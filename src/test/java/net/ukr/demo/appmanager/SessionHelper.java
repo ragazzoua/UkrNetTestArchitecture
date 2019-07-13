@@ -14,7 +14,6 @@ public class SessionHelper extends HelperBase {
     }
 
     public void login(String username, String password) {
-        driver.get("https://www.i.ua/");
         driver.findElementByXPath("//input[@name='login']").click();
         driver.findElementByXPath("//input[@name='login']").clear();
         driver.findElementByXPath("//input[@name='login']").sendKeys(username);
