@@ -23,17 +23,17 @@ public class FirstTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        login();
+        login("ittest2", "337774a");
     }
 
-    private void login() {
+    private void login(String username, String password) {
         driver.get("https://www.i.ua/");
         driver.findElementByXPath("//input[@name='login']").click();
         driver.findElementByXPath("//input[@name='login']").clear();
-        driver.findElementByXPath("//input[@name='login']").sendKeys("ittest2");
+        driver.findElementByXPath("//input[@name='login']").sendKeys(username);
         driver.findElementByXPath("//input[@name='pass']").click();
         driver.findElementByXPath("//input[@name='pass']").clear();
-        driver.findElementByXPath("//input[@name='pass']").sendKeys("337774a");
+        driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
         driver.findElementByXPath("//input[@value='Войти']").click();
     }
 
