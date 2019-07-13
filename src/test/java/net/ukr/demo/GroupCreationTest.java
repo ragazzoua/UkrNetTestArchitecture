@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * created by FAMILY 07.07.2019
  */
 
-public class FirstTest {
+public class GroupCreationTest {
     ChromeDriver driver;
 
     @BeforeMethod
