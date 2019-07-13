@@ -15,7 +15,11 @@ public class GroupHelper extends HelperBase {
     }
 
     public void submitGroupCreation() {
-        driver.findElementByXPath("//input[@ct='CreateGroup']").click();
+        click("//input[@ct='CreateGroup']");
+    }
+
+    private void click(String locator) {
+        driver.findElementByXPath(locator).click();
     }
 
     public void fillGroupForm(GroupData groupData) {
@@ -27,10 +31,10 @@ public class GroupHelper extends HelperBase {
     }
 
     public void selectGroupNameField() {
-        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").click();
+        click("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]");
     }
 
     public void clickAddNewGroup() {
-        driver.findElementByXPath("//*[@id='add_group']/i").click();
+        click("//*[@id='add_group']/i");
     }
 }
