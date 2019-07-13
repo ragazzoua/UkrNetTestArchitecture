@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SeveralGroupCreationTest extends TestBase {
 
-    ChromeDriver driver;
+
 
     @BeforeMethod
     public void setUp() throws Exception {
