@@ -24,12 +24,9 @@ public class FirstTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        openIUa();
+
     }
 
-    private void openIUa() {
-        driver.get("https://www.i.ua/");
-    }
 
     @Test
     public void groupCreationTest() {
