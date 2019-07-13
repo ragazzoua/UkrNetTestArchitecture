@@ -12,7 +12,6 @@ public class AddContactTest extends TestBase{
     public void testAddContact(){
         app.getNavigationHelper().goToContacts();
         app.getGroupHelper().clickAddContact();
-
     }
 
 }
