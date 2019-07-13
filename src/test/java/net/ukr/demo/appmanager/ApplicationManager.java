@@ -33,7 +33,7 @@ public class ApplicationManager {
         driver.manage().window().maximize();
         groupHelper = new GroupHelper(driver);
         navigationHelper = new NavigationHelper(driver);
-        sessionHelper = new SessionHelper();
+        sessionHelper = new SessionHelper(driver);
         login("ittest2", "337774a");
     }
 
