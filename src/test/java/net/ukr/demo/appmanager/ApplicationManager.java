@@ -12,8 +12,9 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class ApplicationManager {
+    ChromeDriver driver;
 
-    private final NavigationHelper navigationHelper = new NavigationHelper();
+    private  NavigationHelper navigationHelper;
     private  GroupHelper groupHelper;
 
     public static boolean isAlertPresent(ChromeDriver driver) {
@@ -27,26 +28,27 @@ public class ApplicationManager {
 
     public void init() {
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        navigationHelper.driver = new ChromeDriver();
-        navigationHelper.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        navigationHelper.driver.manage().window().maximize();
-        groupHelper = new GroupHelper(navigationHelper.driver);
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        groupHelper = new GroupHelper(driver);
+        navigationHelper = new NavigationHelper(driver);
         login("ittest2", "337774a");
     }
 
     private void login(String username, String password) {
-        navigationHelper.driver.get("https://www.i.ua/");
-        navigationHelper.driver.findElementByXPath("//input[@name='login']").click();
-        navigationHelper.driver.findElementByXPath("//input[@name='login']").clear();
-        navigationHelper.driver.findElementByXPath("//input[@name='login']").sendKeys(username);
-        navigationHelper.driver.findElementByXPath("//input[@name='pass']").click();
-        navigationHelper.driver.findElementByXPath("//input[@name='pass']").clear();
-        navigationHelper.driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
-        navigationHelper.driver.findElementByXPath("//input[@value='Войти']").click();
+        driver.get("https://www.i.ua/");
+        driver.findElementByXPath("//input[@name='login']").click();
+        driver.findElementByXPath("//input[@name='login']").clear();
+        driver.findElementByXPath("//input[@name='login']").sendKeys(username);
+        driver.findElementByXPath("//input[@name='pass']").click();
+        driver.findElementByXPath("//input[@name='pass']").clear();
+        driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
+        driver.findElementByXPath("//input[@value='Войти']").click();
     }
 
     public void stop() {
-        navigationHelper.driver.quit();
+        driver.quit();
     }
 
     public GroupHelper getGroupHelper() {
