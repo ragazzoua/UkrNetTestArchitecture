@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * created by FAMILY 13.07.2019
  */
 
-public class TestBase {
+public class TestBase extends ApplicationManager {
     ChromeDriver driver;
 
     @BeforeMethod
