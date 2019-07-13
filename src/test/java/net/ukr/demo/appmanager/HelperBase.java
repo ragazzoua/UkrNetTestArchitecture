@@ -22,7 +22,7 @@ public class HelperBase {
         driver.findElementByXPath(locator).sendKeys(text);
     }
 
-    public static boolean isAlertPresent(ChromeDriver driver) {
+    public boolean isAlertPresent() {
         try {
             driver.switchTo().alert();
             return true;
