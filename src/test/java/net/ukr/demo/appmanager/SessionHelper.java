@@ -14,12 +14,8 @@ public class SessionHelper extends HelperBase {
     }
 
     public void login(String username, String password) {
-        driver.findElementByXPath("//input[@name='login']").click();
-        driver.findElementByXPath("//input[@name='login']").clear();
-        driver.findElementByXPath("//input[@name='login']").sendKeys(username);
-        driver.findElementByXPath("//input[@name='pass']").click();
-        driver.findElementByXPath("//input[@name='pass']").clear();
-        driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
-        driver.findElementByXPath("//input[@value='Войти']").click();
+        type("//input[@name='login']", username);
+        type("//input[@name='pass']", password);
+        click("//input[@value='Войти']");
     }
 }
