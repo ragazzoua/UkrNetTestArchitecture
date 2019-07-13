@@ -1,5 +1,6 @@
 package net.ukr.demo;
 
+import net.ukr.demo.appmanager.ApplicationManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
