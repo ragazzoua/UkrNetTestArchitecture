@@ -6,11 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * created by FAMILY 13.07.2019
  */
 
-public class NavigationHelper {
-    private ChromeDriver driver;
+public class NavigationHelper extends HelperBase {
+
 
     public NavigationHelper(ChromeDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void goToContacts() {
