@@ -19,7 +19,11 @@ public class GroupHelper extends HelperBase {
     }
 
     public void fillGroupForm(GroupData groupData) {
-        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys(groupData.getGroupName());
+        type("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]", groupData.getGroupName());
+    }
+
+    private void type(String locator, String text) {
+        driver.findElementByXPath(locator).sendKeys(text);
     }
 
     public void selectGroupNameField() {
