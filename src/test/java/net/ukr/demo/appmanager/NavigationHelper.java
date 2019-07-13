@@ -14,6 +14,6 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void goToContacts() {
-        driver.findElementByXPath("/html/body/div[1]/div[5]/ul/li[3]/a").click();
+        click("/html/body/div[1]/div[5]/ul/li[3]/a");
     }
 }
