@@ -15,17 +15,8 @@ import java.util.concurrent.TimeUnit;
 public class SeveralGroupCreationTest extends TestBase {
 
 
-
-    @BeforeMethod
-    public void setUp() throws Exception {
-        WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
-
     @Test
-    public void severalGroupCreationTest(){
+    public void severalGroupCreationTest() {
         driver.get("https://www.i.ua/");
         driver.findElementByXPath("//input[@name='login']").click();
         driver.findElementByXPath("//input[@name='login']").clear();
