@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     ChromeDriver driver;
 
-    private final GroupHelper groupHelper = new GroupHelper();
+    private final GroupHelper groupHelper;
 
     public static boolean isAlertPresent(ChromeDriver driver) {
         try {
