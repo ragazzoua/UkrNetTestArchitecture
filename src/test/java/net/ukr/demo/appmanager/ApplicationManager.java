@@ -30,7 +30,7 @@ public class ApplicationManager {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        groupHelper = new GroupHelper();
+        groupHelper = new GroupHelper(driver);
         login("ittest2", "337774a");
     }
 
