@@ -2,7 +2,6 @@ package net.ukr.demo.appmanager;
 
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -17,16 +16,7 @@ public class ApplicationManager {
     private  NavigationHelper navigationHelper;
     private  GroupHelper groupHelper;
 
-    public static boolean isAlertPresent(ChromeDriver driver) {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    public void init() {
+        public void init() {
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);

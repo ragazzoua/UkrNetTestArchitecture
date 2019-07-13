@@ -1,5 +1,6 @@
 package net.ukr.demo.appmanager;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
@@ -19,5 +20,14 @@ public class HelperBase {
 
     protected void type(String locator, String text) {
         driver.findElementByXPath(locator).sendKeys(text);
+    }
+
+    public static boolean isAlertPresent(ChromeDriver driver) {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
     }
 }
