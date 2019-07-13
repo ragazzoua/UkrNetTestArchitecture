@@ -23,6 +23,7 @@ public class FirstTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        driver.get("https://www.i.ua/");
         driver.findElementByXPath("//input[@name='login']").click();
         driver.findElementByXPath("//input[@name='login']").clear();
         driver.findElementByXPath("//input[@name='login']").sendKeys("ittest2");
