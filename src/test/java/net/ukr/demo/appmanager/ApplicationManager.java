@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
     ChromeDriver driver;
-
+    private SessionHelper sessionHelper;
     private  NavigationHelper navigationHelper;
     private  GroupHelper groupHelper;
 
