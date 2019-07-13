@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * created by FAMILY 13.07.2019
  */
 
-public class ApplicationManager {
+public class ApplicationManager extends NavigationHelper {
     ChromeDriver driver;
 
     private  GroupHelper groupHelper;
