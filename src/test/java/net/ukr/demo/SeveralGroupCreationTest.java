@@ -12,15 +12,15 @@ public class SeveralGroupCreationTest extends TestBase {
     @Test
     public void severalGroupCreationTest() {
 
-        goToContacts();
-        clickAddNewGroup();
-        selectGroupNameField();
-        fillGroupForm(new GroupData("testGroup"));
-        submitGroupCreation();
-        clickAddNewGroup();
-        selectGroupNameField();
-        fillGroupForm(new GroupData("testGroup1"));
-        submitGroupCreation();
+        app.goToContacts();
+        app.clickAddNewGroup();
+        app.selectGroupNameField();
+        app.fillGroupForm(new GroupData("testGroup"));
+        app.submitGroupCreation();
+        app.clickAddNewGroup();
+        app.selectGroupNameField();
+        app.fillGroupForm(new GroupData("testGroup1"));
+        app.submitGroupCreation();
     }
 
 

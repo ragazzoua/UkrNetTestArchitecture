@@ -13,11 +13,11 @@ public class GroupCreationTest extends TestBase {
     public void groupCreationTest() {
 
 
-        goToContacts();
-        clickAddNewGroup();
-        selectGroupNameField();
-        fillGroupForm(new GroupData("new group"));
-        submitGroupCreation();
+        app.goToContacts();
+        app.clickAddNewGroup();
+        app.selectGroupNameField();
+        app.fillGroupForm(new GroupData("new group"));
+        app.submitGroupCreation();
 
 
     }
