@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 
 public class GroupHelper {
-    ChromeDriver driver;
+    private ChromeDriver driver;
 
     public GroupHelper(ChromeDriver driver) {
         this.driver = driver;
