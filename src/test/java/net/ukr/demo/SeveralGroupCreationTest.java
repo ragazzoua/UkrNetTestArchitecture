@@ -19,14 +19,7 @@ public class SeveralGroupCreationTest extends TestBase {
 
     @Test
     public void severalGroupCreationTest() {
-        driver.get("https://www.i.ua/");
-        driver.findElementByXPath("//input[@name='login']").click();
-        driver.findElementByXPath("//input[@name='login']").clear();
-        driver.findElementByXPath("//input[@name='login']").sendKeys("ittest2");
-        driver.findElementByXPath("//input[@name='pass']").click();
-        driver.findElementByXPath("//input[@name='pass']").clear();
-        driver.findElementByXPath("//input[@name='pass']").sendKeys("337774a");
-        driver.findElementByXPath("//input[@value='Войти']").click();
+
         driver.findElementByXPath("/html/body/div[1]/div[5]/ul/li[3]/a").click();
         driver.findElementByXPath("//*[@id='add_group']/i").click();
         driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").click();
