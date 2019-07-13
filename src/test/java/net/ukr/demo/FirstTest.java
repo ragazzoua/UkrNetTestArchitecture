@@ -42,17 +42,34 @@ public class FirstTest {
     public void groupCreationTest() {
 
         //driver.findElementByXPath("//p[@class='make_message']/a").click();
-        driver.findElementByXPath("/html/body/div[1]/div[5]/ul/li[3]/a").click();
-        driver.findElementByXPath("//*[@id='add_group']/i").click();
-        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").click();
-        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys("new group");
-        driver.findElementByXPath("//input[@ct='CreateGroup']").click();
-
-
+        goToContacts();
+        clickAddNewGroup();
+        selectGroupNameField();
+        fillGroupForm();
+        submitGroupCreation();
 
 
     }
 
+    private void submitGroupCreation() {
+        driver.findElementByXPath("//input[@ct='CreateGroup']").click();
+    }
+
+    private void fillGroupForm() {
+        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys("new group");
+    }
+
+    private void selectGroupNameField() {
+        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").click();
+    }
+
+    private void clickAddNewGroup() {
+        driver.findElementByXPath("//*[@id='add_group']/i").click();
+    }
+
+    private void goToContacts() {
+        driver.findElementByXPath("/html/body/div[1]/div[5]/ul/li[3]/a").click();
+    }
 
 
     @AfterMethod
