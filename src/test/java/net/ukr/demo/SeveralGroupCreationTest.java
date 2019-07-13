@@ -20,7 +20,7 @@ public class SeveralGroupCreationTest extends TestBase {
     @Test
     public void severalGroupCreationTest() {
 
-        driver.findElementByXPath("/html/body/div[1]/div[5]/ul/li[3]/a").click();
+        goToContacts();
         driver.findElementByXPath("//*[@id='add_group']/i").click();
         driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").click();
         driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys("groupname");
