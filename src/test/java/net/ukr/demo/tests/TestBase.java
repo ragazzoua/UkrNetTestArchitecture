@@ -1,4 +1,4 @@
-package net.ukr.demo;
+package net.ukr.demo.tests;
 
 import net.ukr.demo.appmanager.ApplicationManager;
 import org.testng.annotations.AfterMethod;
