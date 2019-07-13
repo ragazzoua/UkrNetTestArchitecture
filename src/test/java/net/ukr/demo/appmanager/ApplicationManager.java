@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class ApplicationManager extends NavigationHelper {
-    ChromeDriver driver;
 
     private  GroupHelper groupHelper;
 
@@ -43,10 +42,6 @@ public class ApplicationManager extends NavigationHelper {
         driver.findElementByXPath("//input[@name='pass']").clear();
         driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
         driver.findElementByXPath("//input[@value='Войти']").click();
-    }
-
-    public void goToContacts() {
-        driver.findElementByXPath("/html/body/div[1]/div[5]/ul/li[3]/a").click();
     }
 
     public void stop() {
