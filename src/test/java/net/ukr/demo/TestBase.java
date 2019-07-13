@@ -16,15 +16,6 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     ChromeDriver driver;
 
-    public static boolean isAlertPresent(ChromeDriver driver) {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
     @BeforeMethod
     public void setUp() throws Exception {
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
@@ -68,5 +59,14 @@ public class TestBase {
     @AfterMethod
     public void tearDown() {
         driver.quit();
+    }
+
+    public static boolean isAlertPresent(ChromeDriver driver) {
+        try {
+            driver.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
     }
 }
