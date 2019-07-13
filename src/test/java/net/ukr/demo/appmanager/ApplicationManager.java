@@ -34,19 +34,10 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(driver);
         navigationHelper = new NavigationHelper(driver);
         sessionHelper = new SessionHelper(driver);
-        login("ittest2", "337774a");
+        sessionHelper.login("ittest2", "337774a");
     }
 
-    private void login(String username, String password) {
-        driver.get("https://www.i.ua/");
-        driver.findElementByXPath("//input[@name='login']").click();
-        driver.findElementByXPath("//input[@name='login']").clear();
-        driver.findElementByXPath("//input[@name='login']").sendKeys(username);
-        driver.findElementByXPath("//input[@name='pass']").click();
-        driver.findElementByXPath("//input[@name='pass']").clear();
-        driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
-        driver.findElementByXPath("//input[@value='Войти']").click();
-    }
+
 
     public void stop() {
         driver.quit();

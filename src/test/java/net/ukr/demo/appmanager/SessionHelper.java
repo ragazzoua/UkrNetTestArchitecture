@@ -13,4 +13,15 @@ public class SessionHelper {
 
         this.driver = driver;
     }
+
+    public void login(String username, String password) {
+        driver.get("https://www.i.ua/");
+        driver.findElementByXPath("//input[@name='login']").click();
+        driver.findElementByXPath("//input[@name='login']").clear();
+        driver.findElementByXPath("//input[@name='login']").sendKeys(username);
+        driver.findElementByXPath("//input[@name='pass']").click();
+        driver.findElementByXPath("//input[@name='pass']").clear();
+        driver.findElementByXPath("//input[@name='pass']").sendKeys(password);
+        driver.findElementByXPath("//input[@value='Войти']").click();
+    }
 }
