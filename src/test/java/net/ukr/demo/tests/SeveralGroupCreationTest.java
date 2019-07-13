@@ -1,6 +1,6 @@
 package net.ukr.demo.tests;
 
-import net.ukr.demo.GroupData;
+import net.ukr.demo.model.GroupData;
 import org.testng.annotations.Test;
 
 /**

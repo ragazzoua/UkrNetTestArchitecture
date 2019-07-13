@@ -1,4 +1,4 @@
-package net.ukr.demo;
+package net.ukr.demo.model;
 
 public class GroupData {
     private final String groupName;
