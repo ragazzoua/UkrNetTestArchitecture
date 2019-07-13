@@ -6,12 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * created by FAMILY 13.07.2019
  */
 
-public class SessionHelper {
-    private ChromeDriver driver;
+public class SessionHelper extends HelperBase {
+
 
     public SessionHelper(ChromeDriver driver) {
-
-        this.driver = driver;
+        super(driver);
     }
 
     public void login(String username, String password) {
