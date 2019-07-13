@@ -21,8 +21,8 @@ public class SeveralGroupCreationTest extends TestBase {
     public void severalGroupCreationTest() {
 
         goToContacts();
-        driver.findElementByXPath("//*[@id='add_group']/i").click();
-        driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").click();
+        clickAddNewGroup();
+        selectGroupNameField();
         driver.findElementByXPath("//*[@id='workBody']/div[2]/div[1]/div[2]/div[3]/ul/li[1]/p/input[1]").sendKeys("groupname");
         driver.findElementByXPath("//input[@ct='CreateGroup']").click();
         driver.findElementByXPath("//*[@id='add_group']/i").click();
