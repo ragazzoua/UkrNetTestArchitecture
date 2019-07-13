@@ -15,10 +15,10 @@ public class GroupCreationTest extends TestBase {
 
 
         app.goToContacts();
-        app.clickAddNewGroup();
-        app.selectGroupNameField();
-        app.fillGroupForm(new GroupData("new group"));
-        app.submitGroupCreation();
+        app.getGroupHelper().clickAddNewGroup();
+        app.getGroupHelper().selectGroupNameField();
+        app.getGroupHelper().fillGroupForm(new GroupData("new group"));
+        app.getGroupHelper().submitGroupCreation();
 
 
     }

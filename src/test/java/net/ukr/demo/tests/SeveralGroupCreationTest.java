@@ -14,14 +14,14 @@ public class SeveralGroupCreationTest extends TestBase {
     public void severalGroupCreationTest() {
 
         app.goToContacts();
-        app.clickAddNewGroup();
-        app.selectGroupNameField();
-        app.fillGroupForm(new GroupData("testGroup"));
-        app.submitGroupCreation();
-        app.clickAddNewGroup();
-        app.selectGroupNameField();
-        app.fillGroupForm(new GroupData("testGroup1"));
-        app.submitGroupCreation();
+        app.getGroupHelper().clickAddNewGroup();
+        app.getGroupHelper().selectGroupNameField();
+        app.getGroupHelper().fillGroupForm(new GroupData("testGroup"));
+        app.getGroupHelper().submitGroupCreation();
+        app.getGroupHelper().clickAddNewGroup();
+        app.getGroupHelper().selectGroupNameField();
+        app.getGroupHelper().fillGroupForm(new GroupData("testGroup1"));
+        app.getGroupHelper().submitGroupCreation();
     }
 
 
