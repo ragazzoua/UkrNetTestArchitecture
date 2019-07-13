@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * created by FAMILY 13.07.2019
  */
 
-public class GroupHelper {
+public class GroupHelper extends HelperBase {
     private ChromeDriver driver;
 
     public GroupHelper(ChromeDriver driver) {
