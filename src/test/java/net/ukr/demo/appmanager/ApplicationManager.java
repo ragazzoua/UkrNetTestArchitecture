@@ -39,7 +39,7 @@ public class ApplicationManager {
         }
         //WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
         //driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.i.ua/");
         groupHelper = new GroupHelper(driver);
