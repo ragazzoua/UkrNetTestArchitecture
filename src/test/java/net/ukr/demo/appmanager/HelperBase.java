@@ -22,7 +22,10 @@ public class HelperBase {
 
     protected void type(String locator, String text) {
         if (text != null) {
-            driver.findElement(By.xpath(locator)).sendKeys(text);
+            String existingText = driver.findElement(By.xpath(locator)).getAttribute("value");
+            if (!text.equals(existingText)) {
+                driver.findElement(By.xpath(locator)).sendKeys(text);
+            }
         }
     }
 
