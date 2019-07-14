@@ -19,17 +19,25 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void init() {
         String browser = BrowserType.FIREFOX;
         if (browser == BrowserType.FIREFOX) {
+            WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
             driver = new FirefoxDriver();
         } else if (browser == BrowserType.CHROME) {
+            WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
             driver = new ChromeDriver();
         } else if (browser == BrowserType.IE) {
+            WebDriverManager.getInstance(DriverManagerType.IEXPLORER).setup();
             driver = new InternetExplorerDriver();
         }
-        WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
+        //WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
         //driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
