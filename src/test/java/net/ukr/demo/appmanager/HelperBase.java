@@ -3,7 +3,6 @@ package net.ukr.demo.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * created by FAMILY 13.07.2019
@@ -21,12 +20,12 @@ public class HelperBase {
     }
 
     protected void type(String locator, String text) {
-        if (text != null) {
-            String existingText = driver.findElement(By.xpath(locator)).getAttribute("value");
-            if (!text.equals(existingText)) {
+//        if (text != null) {
+//            String existingText = driver.findElement(By.xpath(locator)).getAttribute("value");
+//            if (!text.equals(existingText)) {
                 driver.findElement(By.xpath(locator)).sendKeys(text);
-            }
-        }
+//            }
+//        }
     }
 
     public boolean isAlertPresent() {

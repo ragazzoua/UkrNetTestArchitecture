@@ -2,7 +2,6 @@ package net.ukr.demo.appmanager;
 
 import net.ukr.demo.model.GroupData;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * created by FAMILY 13.07.2019
