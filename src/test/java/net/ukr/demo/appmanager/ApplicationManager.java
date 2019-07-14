@@ -2,7 +2,11 @@ package net.ukr.demo.appmanager;
 
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,14 +15,22 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class ApplicationManager {
-    ChromeDriver driver;
+    WebDriver driver;
     private SessionHelper sessionHelper;
-    private  NavigationHelper navigationHelper;
-    private  GroupHelper groupHelper;
+    private NavigationHelper navigationHelper;
+    private GroupHelper groupHelper;
 
-        public void init() {
+    public void init() {
+        String browser = BrowserType.FIREFOX;
+        if (browser == BrowserType.FIREFOX) {
+            driver = new FirefoxDriver();
+        } else if (browser == BrowserType.CHROME) {
+            driver = new ChromeDriver();
+        } else if (browser == BrowserType.IE) {
+            driver = new InternetExplorerDriver();
+        }
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.i.ua/");
@@ -27,7 +39,6 @@ public class ApplicationManager {
         sessionHelper = new SessionHelper(driver);
         sessionHelper.login("ittest2", "337774a");
     }
-
 
 
     public void stop() {

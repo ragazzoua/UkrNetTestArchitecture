@@ -1,5 +1,6 @@
 package net.ukr.demo.appmanager;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
@@ -9,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SessionHelper extends HelperBase {
 
 
-    public SessionHelper(ChromeDriver driver) {
+    public SessionHelper(WebDriver driver) {
         super(driver);
     }
 
