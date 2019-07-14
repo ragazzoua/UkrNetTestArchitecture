@@ -26,7 +26,7 @@ public class ApplicationManager {
     }
 
     public void init() {
-        String browser = BrowserType.FIREFOX;
+
         if (browser == BrowserType.FIREFOX) {
             WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
             driver = new FirefoxDriver();
