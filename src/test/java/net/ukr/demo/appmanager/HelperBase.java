@@ -21,7 +21,9 @@ public class HelperBase {
     }
 
     protected void type(String locator, String text) {
-        driver.findElement(By.xpath(locator)).sendKeys(text);
+        if (text != null) {
+            driver.findElement(By.xpath(locator)).sendKeys(text);
+        }
     }
 
     public boolean isAlertPresent() {
