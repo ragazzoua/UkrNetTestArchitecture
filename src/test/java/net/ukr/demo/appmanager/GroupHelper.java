@@ -3,6 +3,10 @@ package net.ukr.demo.appmanager;
 import net.ukr.demo.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * created by FAMILY 13.07.2019
@@ -30,11 +34,22 @@ public class GroupHelper extends HelperBase {
         click("//*[@id='add_group']/i");
     }
 
-    public void clickAddContact(){
+    public void clickAddContact() {
         click("/html/body/div[1]/div[5]/ul/li[6]/a");
     }
 
     public int getGroupCount() {
         return driver.findElements(By.xpath("//span[@ct='GroupClick']")).size();
+    }
+
+    public List<GroupData> getGroupList() {
+        List<GroupData> list = new ArrayList<>();
+        List<WebElement> elements = driver.findElements(By.xpath("//span[@ct='GroupClick']"));
+        for (WebElement element : elements) {
+            String name = element.getText();
+            GroupData group = new GroupData(name);
+            list.add(group);
+        }
+        return list;
     }
 }
