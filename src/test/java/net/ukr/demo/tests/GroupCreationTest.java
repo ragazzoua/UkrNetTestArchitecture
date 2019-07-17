@@ -20,7 +20,7 @@ public class GroupCreationTest extends TestBase {
 
         app.getGroupHelper().clickAddNewGroup();
         app.getGroupHelper().selectGroupNameField();
-        app.getGroupHelper().fillGroupForm(new GroupData("null1110"));
+        app.getGroupHelper().fillGroupForm(new GroupData("null11010"));
         app.getGroupHelper().submitGroupCreation();
         List<GroupData> after = app.getGroupHelper().getGroupList();
 
