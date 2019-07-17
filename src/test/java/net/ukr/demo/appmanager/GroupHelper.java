@@ -38,6 +38,10 @@ public class GroupHelper extends HelperBase {
         click("/html/body/div[1]/div[5]/ul/li[6]/a");
     }
 
+    public void selectGroup(int index){
+        driver.findElements(By.xpath("//span[@ct='GroupClick']")).get(index).click();
+    }
+
     public int getGroupCount() {
         return driver.findElements(By.xpath("//span[@ct='GroupClick']")).size();
     }
