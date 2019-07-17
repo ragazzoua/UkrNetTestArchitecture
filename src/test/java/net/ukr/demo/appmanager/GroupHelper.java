@@ -1,6 +1,7 @@
 package net.ukr.demo.appmanager;
 
 import net.ukr.demo.model.GroupData;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -31,5 +32,9 @@ public class GroupHelper extends HelperBase {
 
     public void clickAddContact(){
         click("/html/body/div[1]/div[5]/ul/li[6]/a");
+    }
+
+    public int getGroupCount() {
+        return driver.findElements(By.xpath("//span[@ct='GroupClick']")).size();
     }
 }
